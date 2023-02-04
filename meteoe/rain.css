@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url("Comet.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.form-box {
+    backdrop-filter: blur(2px) saturate(59%);
+    -webkit-backdrop-filter: blur(2px) saturate(59%);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 12px;
+	background-color: rgba(10, 10, 10, 0.165);
+	margin: auto auto;
+	padding: 40px;
+    border-radius: 12px;
+	box-shadow: 0 0 10px #000;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 50%;
+	height: 70%;
+    max-width: 400px;
+    max-height: 430px;
+}
+.form-box:before {
+	background:rgba(0, 0, 0, 0);
+    border-radius: 12px;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	content: "";
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	display: block;
+	filter: blur(1px);
+}
+.form-box .header-text {
+    color: #fff;
+	font-size: 32px;
+	font-weight: 600;
+	padding-bottom: 30px;
+	text-align: center;
+}
+.form-box input {
+	margin: 10px 0px;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	width: 100%;
+	font-size: 18px;
+	font-family: poppins;
+}
+.form-box input[type=checkbox] {
+	display: none;
+}
+.form-box label {
+	position: relative;
+	margin-left: 5px;
+	margin-right: 10px;
+	top: 5px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+.form-box label:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 5px;
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	background-color: #ddd;
+}
+.form-box input[type=checkbox]:checked+label:before {
+	content: "\2713";
+	font-size: 20px;
+	color: #000;
+	text-align: center;
+	line-height: 20px;
+}
+.form-box span {
+    color: #fff;
+	font-size: 14px;
+}
+.form-box button {
+	background-color: deepskyblue;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+	padding: 10px;
+	margin: 20px 0px;
+}
+span a {
+	color: #BBB;
+}
+
+i {
+    position: absolute;
+    height: 200px;
+    background: linear-gradient(transparent, #fff);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    animation: animate 5s linear infinite;
+}
+i:nth-child(3n+1) {
+    background: linear-gradient(transparent, rgb(64, 234, 41));
+    box-shadow: #fff;
+    filter: blur(2px);
+}
+i:nth-child(3n+2) {
+    background: linear-gradient(transparent, rgb(251, 251, 251));
+    box-shadow: #fff;
+}
+i:nth-child(3n+3) {
+    background: linear-gradient(transparent, rgb(230, 117, 234));
+    filter: blur(3px);
+}
+i:nth-child(3n+4) {
+    background: linear-gradient(transparent, rgb(230, 77, 6));
+}
+@keyframes animate {
+    0% {
+        transform: rotate(60deg) translateY(-200px) translateX(-100px);
+    }    
+    100% {
+        transform: rotate(30deg) translateY(calc(100vh + 200px)) translateZ(calc(100vh + 200px));
+    }
+}
+.tombol:hover {
+	background-color: #fff;
+	color: deepskyblue;
+}

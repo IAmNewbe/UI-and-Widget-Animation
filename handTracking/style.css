@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background: black;
+    color: azure;
+}
+
+.container {
+    text-align: center;
+}
+
+.cam {
+    display: inline-block;
+}
+.output_canvas {
+    margin-top: 15px;
+    border: 2px black solid;
+    border-radius: 10px;
+    max-width: 30%;
+}

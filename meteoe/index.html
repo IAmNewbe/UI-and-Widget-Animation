@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie-=edge">
+        <title>Meteor intro</title>
+        <link rel="stylesheet" href="rain.css">
+    </head>
+<body>
+    <div class="form-box">
+        <div class="header-text">
+            Login Form
+        </div><input placeholder="Your Email" type="text"><input
+        placeholder="Your Password" type="password"><input
+        id="term" type="checkbox"><label for="terms"></label>
+        <span>Agree with <a href="#">Terms & Conditions</a></span>
+        <a href="https://en.wikipedia.org" target="_blank"><button class="tombol">Login</button></a>
+        
+    </div>
+    <script>
+        function rain(){
+            let amount = 100;
+            let body = document.querySelector('body');
+            let i = 0;
+            while (i < amount){
+                let drop = document.createElement('i');
+
+                let size = Math.random() * 5;
+                let posX = Math.floor(Math.random() * window.innerWidth);
+                let delay = Math.random() * -20; 
+                let duration = Math.random() *5;
+
+                drop.style.width = 0.2 + size + 'px';
+                drop.style.left = posX + 'px';
+                drop.style.animationDelay = delay+ 's';
+                drop.style.animationDuration = 1+ duration+'s';
+                body.appendChild(drop);
+                i++
+            }
+        }
+
+        rain();
+    </script>
+</body>
+</html>

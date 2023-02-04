@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    background-color: black;
+    
+}
+nav {
+    border: 1px solid black;
+    color: blue;
+    background-color: black;
+}
+ul {
+    padding: 10px;
+    float: right;
+}
+li {
+    display: inline;
+}

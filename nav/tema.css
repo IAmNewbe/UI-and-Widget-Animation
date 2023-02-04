@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    position: relative;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    /* min-height: 100vh; */
+    background: #222327 ;
+}
+
+nav {
+    display: inline;
+}
+.navigation {
+    margin-top: 40px;
+    position: fixed;
+    /* top: 40px; */
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    display: inline-block;   
+    justify-content: right;
+    align-items: center;
+    border-radius: 10px;
+    padding-right: 30px;
+}
+    .navigation ul{
+       
+        float: right;;
+        display: flex;
+        width:400px;  
+    }
+    .navigation ul li {
+  
+        list-style: none;
+        position: relative;
+        width: 70px;
+        height: 60px;
+        z-index: 2;
+        padding: 5px 40px;
+    }
+    .navigation ul li a {
+        padding: 0px 0px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+
+    }
+    #Logo {
+        /* justify-content: left; */
+        padding-left: 20px;
+        float: left;
+        position: absolute;
+        display: block;
+        
+    }
+    .navigation ul li a .icon {
+        position: relative;
+        display: block;
+        line-height: 110px;
+        font-size: 2.5em;
+        transition: 0.5s;
+        color:#222327;
+
+    }
+    ion-icon {
+        width: 100px;
+    }
+    .navigation ul li.active a .icon {
+        
+        transform: translateY(-32px);
+        color: #2900f5;
+    }
+    .navigation ul li a .text {
+        position: absolute;
+        background: #c90017;
+        color: #fff;
+        border-radius: 12px;
+        padding: 2px 7px;
+        font-weight: 400;
+        font-size: 1.05em;
+        letter-spacing: 0.05em;
+        transition: 0.5s;
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    .navigation ul li.active a .text {
+        transform: translateY(-4px);
+        opacity: 1;
+    }
+    .indicator {
+        position: fixed;
+        top: 15px;
+        width: 70px;
+        height: 70px;
+        background: #fff;
+        border-radius: 50%;
+        z-index: 1;
+        transition: 0.5s;
+    }
+    .indicator::before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: -22px;
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        border-radius: 50%;
+        box-shadow: 15px 18px rgb(255, 255, 255);
+    }
+    .indicator::after {
+        content: '';
+        position: absolute;
+        top: -5px;
+        right: -22.2px;
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        border-radius: 50%;
+        box-shadow: -15px 18px #fff;
+    }
+    .navigation ul li:nth-child(1).active ~ .indicator {
+        transform: translateX(calc(80px * 0));
+    }
+    .navigation ul li:nth-child(2).active ~ .indicator {
+        transform: translateX(calc(80px * 1));
+    }
+    .navigation ul li:nth-child(3).active ~ .indicator {
+        transform: translateX(calc(80px * 2));
+    }
+    .navigation ul li:nth-child(4).active ~ .indicator {
+        transform: translateX(calc(80px * 3));
+    }
+    .navigation ul li:nth-child(5).active ~ .indicator {
+        transform: translateX(calc(80px * 4));
+    }
+    
+
+
+main {
+    
+    display: block;
+    text-align: center;
+}
+.box1 {
+    height: 140px;
+    width: 40px;
+    background-color: #222327;
+}
+.back {
+    margin-top: px;
+    background-image: url("images/krpai.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+.png {
+    position: relative;
+}
+.llogo {
+    margin-top: 10px;
+    width: 3em;
+    /* display: inline; */
+}
+.png::before {
+    content: '';
+    position: absolute;
+    bottom: 42%;
+    left: 22.5%;
+    background: #ffffff;
+    width: 20%;
+    height: 3px;
+}
+.png::after {
+    content: '';
+    position: absolute;
+    bottom: 42%;
+    right: 22.5%;
+    background: #ffffff;
+    width: 20%;
+    height: 3px;
+}
+main h4 {
+    padding-top: 5px;
+    margin-top: 10px;
+    /* border-top: #fff solid; */
+    color: #fff;
+    font-size: larger;
+}
+.konten {
+    color: #fff;
+}
+article {
+    margin: 10px 15px;
+}
+.HOME {
+    color: white;
+}
+.HOME h2 {
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 10px;
+    border-bottom: #fff solid ;
+}
+
+@media screen and (max-width: 1000px) {
+    .navigation {
+        margin-top: 40px;
+    position: fixed;
+    /* top: 40px; */
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    display: inline-block;   
+    justify-content: right;
+    align-items: center;
+    border-radius: 10px;
+    padding-right: 1px;
+    }
+    .navigation ul{
+       
+        float: right;;
+        display: flex;
+        width: 260px;
+          
+    }
+    .navigation ul li {
+  
+        list-style: none;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        z-index: 2;
+        padding: 5px 25px;
+    }
+    .navigation ul li a {
+        padding: 0px 0px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+
+    }
+    #Logo {
+        /* justify-content: left; */
+        padding-left: 5px;
+        float: left;
+        position: absolute;
+        display: block;
+        
+    }
+    .navigation ul li a .icon {
+        position: relative;
+        display: block;
+        line-height: 110px;
+        font-size: 2.5em;
+        transition: 0.5s;
+        color:#222327;
+
+    }
+    ion-icon {
+        width: 30px;
+    }
+    .navigation ul li.active a .icon {
+        
+        transform: translateY(-32px);
+        color: #2900f5;
+    }
+    .navigation ul li a .text {
+        position: absolute;
+        background: #c90017;
+        color: #fff;
+        border-radius: 12px;
+        padding: 2px 4px;
+        font-weight: 400;
+        font-size: 0.75em;
+        letter-spacing: 0.05em;
+        transition: 0.5s;
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    .navigation ul li.active a .text {
+        transform: translateY(-4px);
+        opacity: 1;
+    }
+    .indicator {
+        position: fixed;
+        top: 18px;
+        width: 50px;
+        height: 50px;
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
+        z-index: 1;
+        transition: 0.5s;
+    }
+    .indicator::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: -25px;
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        border-radius: 50%;
+        box-shadow: 15px 18px rgb(253, 253, 253);
+    }
+    .indicator::after {
+        content: '';
+        position: absolute;
+        top: -8px;
+        right: -25.5px;
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        border-radius: 50%;
+        box-shadow: -15px 18px #fff;
+    }
+        .navigation ul li:nth-child(1).active ~ .indicator {
+            transform: translateX(calc(50px * 0));
+        }
+        .navigation ul li:nth-child(2).active ~ .indicator {
+            transform: translateX(calc(50px * 1));
+        }
+        .navigation ul li:nth-child(3).active ~ .indicator {
+            transform: translateX(calc(50px * 2));
+        }
+        .navigation ul li:nth-child(4).active ~ .indicator {
+            transform: translateX(calc(50px * 3));
+        }
+        .navigation ul li:nth-child(5).active ~ .indicator {
+            transform: translateX(calc(50px * 4));
+        }
+        
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

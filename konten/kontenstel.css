@@ -1,0 +1,203 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #151515;
+
+}
+
+nav {
+    position: relative;
+    margin: 0 auto 0;
+    width: 590px;
+    height: 50px;
+    background: #34495e;
+    border-radius: 10px;
+    font-size: 0;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+
+}
+
+nav a {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background: #00ec00;
+    border-radius: 10px;
+    transition: all .5s ease 0s;
+}
+
+nav a:nth-child(1) {
+    width: 100px;
+}
+nav .start-home, a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0px;
+}
+nav a:nth-child(2){
+    width: 110px;
+}
+nav a:nth-child(2):hover~.animation {
+    width: 110px;
+    left: 100px;
+}
+nav a:nth-child(3) {
+    width: 100px;
+}
+nav a:nth-child(3):hover~.animation {
+    width: 100px;
+    left: 210px;
+}
+nav a:nth-child(4) {
+    width: 160px;
+}
+nav a:nth-child(4):hover~.animation {
+    width: 160px;
+    left: 310px;
+}
+nav a:nth-child(5) {
+    width: 120px;
+}
+nav a:nth-child(5):hover~.animation {
+    width: 120px;
+    left: 470px;
+}
+
+.kotak {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.cube {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate {
+    0%
+    {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100%
+    {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+.cube div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+
+.cube div span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(#151515, #00ec00); */
+    /* background: url('pp.JPG') center no-repeat;
+    background-size: cover; */
+    
+    transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+}
+.one {
+    background: url('pp.JPG') center no-repeat;
+    background-size: cover;
+}
+.two {
+    background: url('robot1.jpeg') center no-repeat;
+    background-size: cover;
+}
+.three {
+    background: url('42.JPG') center no-repeat;
+    background-size: cover;
+}
+.four {
+    background: url('krpai.jpg') center no-repeat;
+    background-size: cover;
+}
+.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 300px;
+    background: url('Abinara.jpg') center no-repeat;
+    background-size: cover;
+    transform: rotateX(90deg) translateZ(150px);
+}
+.top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 300px;
+    background: rgb(254, 58, 41);
+    transform: translateZ(-380px);
+    filter: blur(20px);
+    box-shadow: 0 0 120px rgba(96, 0, 0, 0.2),
+    0 0 200px rgba(255, 13, 0, 0.4),
+    0 0 300px rgba(255, 60, 0, 0.6),
+    0 0 400px rgba(255, 119, 0, 0.8),
+    0 0 500px rgba(129, 5, 0, 0.137);
+}
+.cards {
+    perspective: 500px;
+    text-align: center;
+    left: -50px;
+}
+.card {
+    width: 200px;
+    height: 200px;
+    background: url('pp.JPG') center no-repeat;
+    background-size: cover;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 4px;
+    position: relative;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform .5s;
+}
+.card:hover {
+    transform: translateZ(10px) rotateX(20deg)
+    rotateY(30deg);
+}
+.card-title {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    transition: transform .5s;
+}
+.card:hover card-title {
+    transform: translateZ(50px);
+}
+
+
